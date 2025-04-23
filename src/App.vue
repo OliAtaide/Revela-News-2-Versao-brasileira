@@ -1,30 +1,34 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <header>
+    <HeaderView />
+  </header>
+  <main>
+    <h2>UNIDADE 3 - NEWS 2 - VERSÃO BRASILEIRA</h2>
+    <div class="container container-main">
+      <h1>
+        {{ route.meta.title }}
+      </h1>
+      <p>
+        {{ route.meta.text }}
+      </p>
+      <NavRoutes />
+      <router-view />
+    </div>
+    <NavButtons />
+  </main>
+  <footer>
+    <FooterView />
+  </footer>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script setup>
+import { useRoute } from "vue-router";
+import FooterView from "./components/FooterView.vue";
+import HeaderView from "./components/HeaderView.vue";
+import NavButtons from "./components/NavButtons.vue";
+import NavRoutes from "./components/NavRoutes.vue";
 
-nav {
-  padding: 30px;
+const route = useRoute();
+</script>
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
+<style lang="scss" src="@/assets/style.scss"></style>

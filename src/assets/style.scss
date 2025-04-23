@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+    font-family: "Jost", sans-serif;
+}
+
+:root {
+    --primary-dark: #113154;
+}
+
+.feedback {
+    background-color: #e8eef8;
+}
+
+.text {
+    background-color: whtie;
+    box-shadow: 0px 0px 1px 1px #666;
+}
+
+.alert {
+    margin: 0;
+    padding: 8px 16px;
+    color: #2c4678;
+    border-radius: 4px;
+}
+
+header {
+    background-color: #e1f4fd;
+    padding: 16px 0;
+
+    .col {
+        margin-bottom: 16px;
+    }
+
+    strong {
+        color: #113154;
+    }
+}
+
+.container-main {
+    border-radius: 8px;
+    border: 1px solid #113154;
+    padding: 32px;
+}
+
+.container-body {
+    gap: 32px;
+}
+
+main {
+    h1,
+    h2 {
+        color: #113154;
+    }
+
+    h1 {
+        font-size: 32px;
+        font-weight: 500;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 26px;
+        margin: 16px 0;
+        font-weight: 400;
+    }
+
+    p {
+        font-size: 20px;
+        color: #333;
+    }
+}
+
+.nav {
+    justify-content: space-between;
+}
+
+.border-primary,
+.btn-primary {
+    border-color: var(--primary-dark) !important;
+}
+
+.btn.border-primary {
+    color: var(--primary-dark) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-dark);
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 1em 0;
+
+    color: var(--primary-dark);
+
+    .number {
+        border: 1px solid var(--primary-dark);
+        color: var(--primary-dark);
+        font-weight: 700;
+        display: flex;
+        width: 32px;
+        height: 32px;
+        padding: 8px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: -500px;
+        border-radius: 128px;
+        font-size: 14px;
+    }
+
+    &.active {
+        .number {
+            border: 1px solid var(--success);
+            background: var(--success);
+            color: white;
+        }
+    }
+
+    &.router-link-active {
+        .number {
+            background-color: var(--primary-dark);
+            color: white;
+        }
+    }
+}
+
+.btn {
+    font-size: 20px;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
