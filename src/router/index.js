@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "@/views/HomeView.vue";
 import MenuView from "@/views/MenuView.vue";
+import TraducoesView from "@/views/TraducoesView.vue";
 
 const routes = [
   {
@@ -18,6 +19,14 @@ const routes = [
     component: MenuView,
     meta: {
       title: "Menu do Curso",
+    },
+  },
+  {
+    path: "/traducoes",
+    name: "Traduções",
+    component: TraducoesView,
+    meta: {
+      title: "Traduções",
     },
   },
   {

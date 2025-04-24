@@ -27,7 +27,9 @@ import FooterView from "./components/FooterView.vue";
 import HeaderView from "./components/HeaderView.vue";
 import NavButtons from "./components/NavButtons.vue";
 import NavRoutes from "./components/NavRoutes.vue";
+import { register } from 'swiper/element/bundle';
 
+register();
 const route = useRoute();
 </script>
 
