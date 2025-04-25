@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
-    font-family: "Jost", sans-serif;
+    font-family: "Jost", sans-serif !important;
 }
 
 :root {
     --primary-dark: #113154;
+    --success: #178545;
 }
 
 .feedback {
@@ -80,51 +81,100 @@ main {
     border-color: var(--primary-dark) !important;
 }
 
+.btn-primary,
+.btn-secondary {
+    svg path {
+        stroke: white !important;
+    }
+}
+
+
 .btn.border-primary {
     color: var(--primary-dark) !important;
+    svg path{
+        stroke: var(--primary-dark);
+    }
 }
 
 .btn-primary {
     background-color: var(--primary-dark);
+
+    &:hover {
+        background-color: black !important;
+        border-color: black !important;
+    }
+}
+
+.border-secondary,
+.btn-secondary {
+    border-color: #29c3f1 !important;
+}
+
+.btn.border-secondary {
+    color: #29c3f1;
+}
+
+.btn-secondary {
+    background-color: #29c3f1;
+
+    &:hover {
+        background-color: var(--primary-dark) !important;
+        border-color: var(--primary-dark) !important;
+    }
+}
+.nav {
+    padding: 1em 0;
 }
 
 .nav-link {
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 1em 0;
+    padding: 0;
 
     color: var(--primary-dark);
 
     .number {
-        border: 1px solid var(--primary-dark);
-        color: var(--primary-dark);
+        background-color: var(--success);
+        color: white;
         font-weight: 700;
         display: flex;
         width: 32px;
         height: 32px;
-        padding: 8px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: -500px;
         border-radius: 128px;
         font-size: 14px;
-    }
 
-    &.active {
-        .number {
-            border: 1px solid var(--success);
-            background: var(--success);
-            color: white;
+        span {
+            display: none;
         }
     }
+}
 
-    &.router-link-active {
-        .number {
-            background-color: var(--primary-dark);
-            color: white;
-        }
+.router-link-active {
+    .number {
+        background-color: var(--primary-dark);
+    }
+}
+
+.router-link-active,
+.nav-item:has(.router-link-active) ~ .nav-item {
+    svg {
+        display: none;
+    }
+
+    span {
+        display: block !important;
+    }
+}
+
+.nav-item:has(.router-link-active) ~ .nav-item {
+    .number {
+        border: 1px solid var(--primary-dark);
+        color: var(--primary-dark);
+        background-color: #fff;
     }
 }
 

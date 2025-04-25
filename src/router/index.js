@@ -2,6 +2,11 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "@/views/HomeView.vue";
 import MenuView from "@/views/MenuView.vue";
 import TraducoesView from "@/views/TraducoesView.vue";
+import ComiteView from "@/views/ComiteView.vue";
+import TesteView from "@/views/TesteView.vue";
+import VersaoView from "@/views/VersaoView.vue";
+import ArtigoView from "@/views/ArtigoView.vue";
+import EndView from "@/views/EndView.vue";
 
 const routes = [
   {
@@ -30,13 +35,44 @@ const routes = [
     },
   },
   {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+    path: "/comite",
+    name: "Comitê de Especialistas",
+    component: ComiteView,
+    meta: {
+      title: "Comitê de Especialistas",
+    },
+  },
+  {
+    path: "/teste",
+    name: "Teste Piloto",
+    component: TesteView,
+    meta: {
+      title: "Teste Piloto",
+    },
+  },
+  {
+    path: "/versao-final",
+    name: "Versão Final",
+    component: VersaoView,
+    meta: {
+      title: "Versão Final",
+    },
+  },
+  {
+    path: "/artigo",
+    name: "Artigo",
+    component: ArtigoView,
+    meta: {
+      title: "Artigo",
+    },
+  },
+  {
+    path: "/end",
+    name: "Finalização",
+    component: EndView,
+    meta: {
+      title: "Finalização",
+    },
   },
 ];
 

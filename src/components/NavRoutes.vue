@@ -3,8 +3,8 @@
     <li class="nav-item" v-for="(r, i) in slides" :key="i">
       <router-link :to="`${r.path}`" class="nav-link" aria-current="page">
         <div class="number">
-          <i v-if="r < $route.params.id" class="bi bi-check"></i>
-          <span v-else>
+          <CheckIcon />
+          <span>
             {{ i + 1 }}
           </span>
         </div>
@@ -15,6 +15,7 @@
 </template>
 
 <script setup>
+import CheckIcon from "@/icons/CheckIcon.vue";
 import { useRouter } from "vue-router";
 
 const router = useRouter();

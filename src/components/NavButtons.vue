@@ -17,7 +17,7 @@
       :to="previousRoute"
       class="btn border-primary"
     >
-      <i class="bi bi-chevron-left"></i>
+      <ArrowLeftIcon />
       Anterior
     </router-link>
     <router-link v-if="nextRoute" :to="nextRoute" class="btn btn-primary">
@@ -28,6 +28,7 @@
 </template>
 
 <script setup>
+import ArrowLeftIcon from "@/icons/ArrowLeftIcon.vue";
 import ArrowRightIcon from "@/icons/ArrowRightIcon.vue";
 import ImportIcon from "@/icons/ImportIcon.vue";
 import LogoutIcon from "@/icons/LogoutIcon.vue";
