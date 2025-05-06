@@ -30,6 +30,9 @@ import SwiperButtons from "@/components/SwiperButtons.vue";
       <img class="img-fluid" src="@/assets/imgs/traducao2.jpg" alt="" />
     </swiper-slide>
     <swiper-slide>
+      <img class="img-fluid" src="@/assets/imgs/traducao3.jpg" alt="" />
+    </swiper-slide>
+    <swiper-slide>
       <img class="img-fluid" src="@/assets/imgs/traducao4.jpg" alt="" />
     </swiper-slide>
   </swiper-container>

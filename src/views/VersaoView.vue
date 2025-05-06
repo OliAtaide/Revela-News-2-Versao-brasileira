@@ -1,5 +1,6 @@
 <script setup>
 import SwiperButtons from "@/components/SwiperButtons.vue";
+import ImportIcon from "@/icons/ImportIcon.vue";
 </script>
 
 <template>
